@@ -23,8 +23,16 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: "ja",
+    locales: ["ja", "en"],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      jp: {
+        label: '日本語',
+      },
+    },
   },
 
   plugins: [
@@ -46,7 +54,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
+          sidebarPath: require.resolve("./sidebarDocs.js"),
         },
         blog: {
           showReadingTime: true,
@@ -71,14 +79,15 @@ const config = {
           src: "img/logo.png",
         },
         items: [
-          {
-            type: "doc",
-            docId: "intro",
-            position: "left",
-            label: "Tutorial",
-          },
+          //{
+          //  type: "doc",
+          //  docId: "intro",
+          //  position: "left",
+          //  label: "Tutorial",
+          //},
           { to: "/blog", label: "Blog", position: "left" },
           { to: "/tools/list", label: "Tools", position: "left" },
+          { type: 'localeDropdown', position: 'right' },
           {
             href: "https://github.com/stoikheia",
             label: "GitHub",
@@ -90,28 +99,11 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs/intro",
-              },
-            ],
-          },
-          {
             title: "Community",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
                 label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                href: "https://twitter.com/3xv",
               },
             ],
           },
@@ -129,7 +121,6 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

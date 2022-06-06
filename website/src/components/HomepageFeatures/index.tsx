@@ -10,32 +10,42 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'マルチメディア開発',
+    Svg: require('@site/static/img/pages/CameraLens1.svg').default,
+    description: (
+<>
+<b>動画、音声</b><br/>
+エンコードアプリケーション開発<br/>
+プレイヤー開発<br/>
+<b>2Dグラフィック</b><br/>
+フィルタ処理<br/>
+リアルタイムエフェクト<br/>
+<b>3Dグラフィック</b><br/>
+DirectX<br/>
+OpenGL<br/>
+GLSL<br/>
+</>
+    ),
+  },
+  {
+    title: 'Webシステム開発',
+    Svg: require('@site/static/img/pages/clowd1.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+サーバー設計、実装<br/>
+クラウド利用<br/>
+DB設計<br/>
+パフォーマンスチューニング<br/>
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'ライブラリ開発',
+    Svg: require('@site/static/img/pages/library1.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+プロトコルスタック<br/>
+符号化アルゴリズム<br/>
       </>
     ),
   },

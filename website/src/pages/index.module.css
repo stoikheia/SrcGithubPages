@@ -4,10 +4,20 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  color: rgb(253, 108, 251);
+  text-shadow    : 
+       3px  3px 0px #ffffff,
+      -3px  3px 0px #ffffff,
+       3px -3px 0px #ffffff,
+      -3px -3px 0px #ffffff,
+       3px  0px 0px #ffffff,
+       0px  3px 0px #ffffff,
+      -3px  0px 0px #ffffff,
+       0px -3px 0px #ffffff;
 }
 
 @media screen and (max-width: 996px) {
@@ -16,8 +26,36 @@
   }
 }
 
+.headerBackground {
+  background-color: white;
+}
+
+.headerBackgroundDark {
+  background-color: darkgrey;
+}
+
+.headerMargin {
+ margin: 8rem auto 7rem auto;
+}
+
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.headerTop {
+  height: 50px;
+  background: linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,0.5));
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.headerBottom {
+  height: 30px;
+  background:
+   linear-gradient(0deg, rgba(60,60,60,0) 80%, rgba(30,30,30,0.3)),
+   linear-gradient(0deg, rgba(60,60,60,0), rgba(60,60,60,0.15));
 }
