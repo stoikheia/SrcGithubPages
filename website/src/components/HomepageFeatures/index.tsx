@@ -29,7 +29,7 @@ GLSL<br/>
   },
   {
     title: 'Webシステム開発',
-    Svg: require('@site/static/img/pages/clowd1.svg').default,
+    Svg: require('@site/static/img/pages/clowd1_6.svg').default,
     description: (
       <>
 サーバー設計、実装<br/>
