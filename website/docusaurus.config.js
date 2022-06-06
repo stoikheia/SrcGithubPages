@@ -69,6 +69,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      //announcementBar: {
+      //  id: 'notice',
+      //  content:
+      //    'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
+      //  backgroundColor: '#FD6CFB',
+      //  textColor: '#091E42',
+      //  isCloseable: false,
+      //},
       colorMode: {
         defaultMode: "dark",
       },

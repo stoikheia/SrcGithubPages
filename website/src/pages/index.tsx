@@ -4,13 +4,16 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import { Parallax } from 'react-parallax';
+import { useColorMode } from '@docusaurus/theme-common';
 
 import styles from './index.module.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+  const {colorMode} = useColorMode();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner, styles.headerBackground)}>
+    <header className={clsx('hero hero--primary', styles.heroBanner,
+     colorMode === 'dark' ? styles.headerBackgroundDark : styles.headerBackground)}>
       <div style={{width: '100%'}}>
       <Parallax bgImage="/img/pages/DSC03961.jpg" strength={300} style={{
         height: '100%',
