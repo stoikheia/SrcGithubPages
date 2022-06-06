@@ -10,11 +10,10 @@ const config = {
   tagline: "stoikheia is a developer in japan",
   url: "https://stoikheia.github.io/",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.png",
   trailingSlash: true,
-  onBrokenLinks: 'warn',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
