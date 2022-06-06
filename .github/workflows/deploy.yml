@@ -12,6 +12,8 @@ jobs:
         working-directory: website
     steps:
       - uses: actions/checkout@v3
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: git config
         run: |
           git config --global user.email "rtez@gmail.com"
@@ -19,5 +21,5 @@ jobs:
       - run: yarn install
       - run: yarn deploy
         env:
-          GIT_USER: ${{ github.actor }}:${{ github.token }}
+          GIT_USER: ${{ github.actor }}
           DEPLOYMENT_BRANCH: main
