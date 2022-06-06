@@ -20,3 +20,4 @@ jobs:
       - run: yarn deploy
         env:
           GIT_USER: ${{ github.actor }}
+          DEPLOYMENT_BRANCH: main
