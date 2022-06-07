@@ -14,12 +14,32 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: yarn
       - name: git config
         run: |
           git config --global user.email "rtez@gmail.com"
           git config --global user.name "Reiji Tokuda"
-      - run: yarn install
-      - run: yarn deploy
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build website
+        run: yarn build
+#      - name: Deploy to Github Pages (push-another-repo)
+#        uses: cpina/github-action-push-to-another-repository@main
+#        env:
+#          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+#        with:
+#          source-directory: website/build
+#          destination-github-username: stoikheia
+#          destination-repository-name: stoikheia.github.io
+#          user-email: tokuda@rtez.net
+#          target-branch: main
+#          user-name: Reiji Tokuda
+      - name: Deploy to GitHub Pages
+        run: yarn deploy
         env:
-          GIT_USER: ${{ github.actor }}:${{ github.token }}
+#          GIT_USER: ${{ github.actor }}:${{ github.token }}
+          GIT_USER: ${{ github.actor }}:${{ secrets.API_TOKEN_GITHUB }}
           DEPLOYMENT_BRANCH: main

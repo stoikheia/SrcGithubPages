@@ -13,7 +13,9 @@ const config = {
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.png",
-  trailingSlash: true,
+  trailingSlash: false,
+  deploymentBranch: 'main',
+
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
