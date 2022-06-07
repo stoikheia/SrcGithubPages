@@ -1,6 +1,6 @@
 {
-  "name": "website",
-  "version": "0.0.0",
+  "name": "SrcGithubPages",
+  "version": "0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -41,5 +41,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/stoikheia/SrcGithubPages",
+  "author": "Reiji Tokuda",
+  "license": "MIT"
 }
