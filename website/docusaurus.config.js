@@ -4,6 +4,12 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+/** @type {import('@docusaurus/mdx-loader').MDXPlugin} */
+const remarkMath =  require('remark-math');
+
+/** @type {any} */
+const rehypeKatex = require('rehype-katex');
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "stoikheia's website",
@@ -15,6 +21,15 @@ const config = {
   favicon: "img/favicon.png",
   trailingSlash: false,
   deploymentBranch: 'main',
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X',
+      crossorigin: 'anonymous',
+    },
+  ],
 
 
   // GitHub pages deployment config.
@@ -61,6 +76,12 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          exclude: [
+            '**/_*.{js,jsx,ts,tsx,md,mdx}',
+            '**/_*/**',
+          ],
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
