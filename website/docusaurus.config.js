@@ -81,7 +81,7 @@ const config = {
       //  isCloseable: false,
       //},
       colorMode: {
-        defaultMode: "dark",
+        defaultMode: "light",
       },
       navbar: {
         title: "Stoikheia's Site",
