@@ -1,0 +1,49 @@
+---
+title: docusaurusでtwitterの埋め込み
+authors: stoikheia
+tags: [tech, docusaurus]
+---
+
+
+
+import { TwitterTimelineEmbed, TwitterTweetEmbed } from 'react-twitter-embed';
+
+## react-twitter-embed
+
+https://github.com/saurabhnemade/react-twitter-embed
+
+```bash
+npm install react-twitter-embed
+```
+
+## Timeline
+
+```html
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
+
+<TwitterTimelineEmbed
+  sourceType={'profile'}
+  screenName={'docusaurus'}
+  options={{height: 400, width: 400}}
+/>
+```
+
+<TwitterTimelineEmbed
+  sourceType={'profile'}
+  screenName={'docusaurus'}
+  options={{height: 400, width: 400}}
+/>
+
+## Tweet
+
+```html
+import { TwitterTweetEmbed } from 'react-twitter-embed';
+
+<TwitterTweetEmbed
+  tweetId={'941369886214778880'}
+/>
+```
+
+<TwitterTweetEmbed
+  tweetId={'941369886214778880'}
+/>
