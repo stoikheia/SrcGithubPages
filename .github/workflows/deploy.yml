@@ -3,8 +3,7 @@ name: Deploy
 on:
   push:
     branches: [ main ]
-  paths-ignore:
-    paths:
+    paths-ignore:
       - '.gitignore'
       - 'SrcGithubPages.code-workspace'
       - '.github/**'
