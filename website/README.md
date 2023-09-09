@@ -24,6 +24,21 @@ $ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
+## Push with Deployment by Github Actions
+
+- Just `git push` the commit to repository
+- It should be granted by `PAT`
+  1. Gneerate a PAT
+     - Developer Settings > Personal access tokens > Fine-grained tokens
+       - Generate a PAT
+       - `Only secret repositories` = your git hub pages repository
+       - `Permissions`
+         - `Repository permissions`
+           - Set `Contents` = `Access: Read and write`
+     - or use `classic Token` to simplify
+  2. repo Settings > Security > Secrets and variables > Actions
+     - Set PAT into Repository secrets
+
 ### Deployment
 
 Using SSH:
