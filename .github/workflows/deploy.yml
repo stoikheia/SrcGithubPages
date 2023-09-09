@@ -3,6 +3,13 @@ name: Deploy
 on:
   push:
     branches: [ main ]
+  paths-ignore:
+    - '.gitignore'
+    - 'SrcGithubPages.code-workspace'
+    - '.github/**'
+    - '.vscode/**'
+    - 'website/README.md'
+    - 'website/.gitignore'
 
 jobs:
   deploy:
